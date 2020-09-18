@@ -2,27 +2,17 @@
 
 Ansible collection of system related roles
 
+## Roles
 
-## Build Status
-
-### GitHub Actions
-
-![Molecule Test](https://github.com/mrlesmithjr/mrlesmithjr.system/workflows/Molecule%20Test/badge.svg)
-
-### Travis CI
-
-[![Build Status](https://travis-ci.org/mrlesmithjr/mrlesmithjr.system.svg?branch=master)](https://travis-ci.org/mrlesmithjr/mrlesmithjr.system)
-
-
+|       Role       |                                                                       Build Status                                                                       |
+| :--------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|   apt_sources    |      ![mrlesmithjr.system.apt_sources](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.apt_sources/badge.svg)      |
+| bootstrap_python | ![mrlesmithjr.system.bootstrap_python](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.bootstrap_python/badge.svg) |
 
 ## Requirements
 
 For any required Ansible roles, review:
 [requirements.yml](requirements.yml)
-
-## Role Variables
-
-[defaults/main.yml](defaults/main.yml)
 
 ## Dependencies
 
