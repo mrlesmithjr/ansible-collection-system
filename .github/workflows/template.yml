@@ -1,0 +1,57 @@
+
+name: "FQCN of the Role"
+on:
+  push:
+    paths:
+      - roles/role_name/**
+      - molecule/role_name/**
+      - .github/workflows/role_name.yml
+  pull_request:
+    paths:
+      - roles/role_name/**
+      - molecule/role_name/**
+      - .github/workflows/role_name.yml
+jobs:
+  molecule:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        molecule_distro:
+          - centos7
+          - centos8
+          - debian8
+          - debian9
+          - debian10
+          - fedora
+          - ubuntu1604
+          - ubuntu1804
+          - ubuntu2004
+        collection_role:
+          - role_name
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v1
+        with:
+          path: ansible_collections/ericsysmin/system
+
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          sudo apt install docker
+          python -m pip install --upgrade pip
+          pip install molecule yamllint ansible-lint docker
+
+      - name: Run role test
+        run: >-
+          molecule --version &&
+          ansible --version &&
+          MOLECULE_COMMAND=${{ matrix.molecule_distro.command }}
+          MOLECULE_DISTRO=${{ matrix.molecule_distro.distro }}
+          molecule --debug test -s ${{ matrix.collection_role }}
+
