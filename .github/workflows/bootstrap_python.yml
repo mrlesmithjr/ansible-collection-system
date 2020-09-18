@@ -2,14 +2,14 @@ name: bootstrap_python
 on:
   push:
     paths:
-      - roles/bootstrap_python/**
-      - molecule/**
-      - .github/workflows/bootstrap_python.yml
+      - "roles/bootstrap_python/**"
+      - "molecule/**"
+      - ".github/workflows/bootstrap_python.yml"
   pull_request:
     paths:
-      - roles/bootstrap_python/**
-      - molecule/**
-      - .github/workflows/bootstrap_python.yml
+      - "roles/bootstrap_python/**"
+      - "molecule/**"
+      - ".github/workflows/bootstrap_python.yml"
 jobs:
   molecule:
     runs-on: ubuntu-latest
