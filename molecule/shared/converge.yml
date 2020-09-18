@@ -5,7 +5,9 @@
     - name: Test apt_sources Role
       import_role:
         name: apt_sources
-      when: lookup('env', 'COLLECTION_ROLE') == "apt_sources"
+      when:
+        - lookup('env', 'COLLECTION_ROLE') == "apt_sources"
+        - ansible_os_family == "Debian"
 
     - name: Test bootstrap_python Role
       import_role:
