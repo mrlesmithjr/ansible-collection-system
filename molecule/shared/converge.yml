@@ -1,6 +1,8 @@
 ---
 - name: Converge
   hosts: all
+  vars:
+    apt_sources_enable_backports: false
   tasks:
     - name: Test apt_sources Role
       import_role:
