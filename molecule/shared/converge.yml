@@ -1,5 +1,18 @@
 ---
 - name: Converge
   hosts: all
-  collections:
-  - mrlesmithjr.system
+  tasks:
+    - name: Test apt_sources Role
+      import_role:
+        name: apt_sources
+      when: lookup('env', 'COLLECTION_ROLE') == "apt_sources"
+
+    - name: Test bootstrap_python Role
+      import_role:
+        name: bootstrap_python
+      when: lookup('env', 'COLLECTION_ROLE') == "bootstrap_python"
+
+    - name: Test chrony Role
+      import_role:
+        name: chrony
+      when: lookup('env', 'COLLECTION_ROLE') == "chrony"

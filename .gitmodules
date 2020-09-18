@@ -1,0 +1,39 @@
+[submodule "roles/config_interfaces"]
+	path = roles/config_interfaces
+	url = https://github.com/mrlesmithjr/ansible-config-interfaces.git
+[submodule "roles/bootstrap_python"]
+	path = roles/bootstrap_python
+	url = https://github.com/mrlesmithjr/ansible-bootstrap-python.git
+[submodule "roles/netplan"]
+	path = roles/netplan
+	url = https://github.com/mrlesmithjr/ansible-netplan.git
+[submodule "roles/ipset"]
+	path = roles/ipset
+	url = https://github.com/mrlesmithjr/ansible-ipset.git
+[submodule "roles/etc_hosts"]
+	path = roles/etc_hosts
+	url = https://github.com/mrlesmithjr/ansible-etc-hosts.git
+[submodule "roles/ntp"]
+	path = roles/ntp
+	url = https://github.com/mrlesmithjr/ansible-ntp.git
+[submodule "roles/mdadm"]
+	path = roles/mdadm
+	url = https://github.com/mrlesmithjr/ansible-mdadm.git
+[submodule "roles/rsyslog"]
+	path = roles/rsyslog
+	url = https://github.com/mrlesmithjr/ansible-rsyslog.git
+[submodule "roles/apt_sources"]
+	path = roles/apt_sources
+	url = https://github.com/mrlesmithjr/ansible-apt-sources.git
+[submodule "roles/motd"]
+	path = roles/motd
+	url = https://github.com/mrlesmithjr/ansible-motd.git
+[submodule "roles/sshd"]
+	path = roles/sshd
+	url = https://github.com/mrlesmithjr/ansible-sshd.git
+[submodule "roles/chrony"]
+	path = roles/chrony
+	url = https://github.com/mrlesmithjr/ansible-chrony.git
+[submodule "roles/postfix"]
+	path = roles/postfix
+	url = https://github.com/mrlesmithjr/ansible-postfix.git

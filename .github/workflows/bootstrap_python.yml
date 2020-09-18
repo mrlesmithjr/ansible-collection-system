@@ -1,8 +1,17 @@
----
-name: Molecule Test
-on: push
+name: bootstrap_python
+on:
+  push:
+    paths:
+      - roles/bootstrap_python/**
+      - molecule/**
+      - .github/workflows/bootstrap_python.yml
+  pull_request:
+    paths:
+      - roles/bootstrap_python/**
+      - molecule/**
+      - .github/workflows/bootstrap_python.yml
 jobs:
-  build:
+  molecule:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -18,7 +27,8 @@ jobs:
           - ubuntu1604
           - ubuntu1804
           - ubuntu2004
-
+        collection_role:
+          - bootstrap_python
     steps:
       - uses: actions/checkout@v1
       - name: Set up Python 3
@@ -33,4 +43,5 @@ jobs:
           molecule --version
       - name: Test with molecule
         run: |
+          export COLLECTION_ROLE="${{ matrix.collection_role }}"
           molecule test --scenario-name ${{ matrix.molecule_distro }}
