@@ -25,5 +25,7 @@ provisioner:
   playbooks:
     converge: ../shared/converge.yml
     prepare: ../shared/prepare.yml
+  env:
+    ANSIBLE_ROLES_PATH: ../../roles
 verifier:
   name: ansible
