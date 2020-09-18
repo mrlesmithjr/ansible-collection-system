@@ -1,4 +1,4 @@
-name: bootstrap_python
+name: mrlesmithjr.system.bootstrap_python
 on:
   push:
     paths:

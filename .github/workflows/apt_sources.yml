@@ -1,4 +1,4 @@
-name: apt_sources
+name: mrlesmithjr.system.apt_sources
 on:
   push:
     paths:
