@@ -2,12 +2,12 @@ name: mrlesmithjr.system.chrony
 on:
   push:
     paths:
-      - "roles/chrony/**"
+      - "roles/chrony"
       - "molecule/**"
       - ".github/workflows/chrony.yml"
   pull_request:
     paths:
-      - "roles/chrony/**"
+      - "roles/chrony"
       - "molecule/**"
       - ".github/workflows/chrony.yml"
 jobs:
