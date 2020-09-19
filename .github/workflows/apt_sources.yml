@@ -2,12 +2,12 @@ name: mrlesmithjr.system.apt_sources
 on:
   push:
     paths:
-      - "roles/apt_sources/**"
+      - "roles/apt_sources"
       - "molecule/**"
       - ".github/workflows/apt_sources.yml"
   pull_request:
     paths:
-      - "roles/apt_sources/**"
+      - "roles/apt_sources"
       - "molecule/**"
       - ".github/workflows/apt_sources.yml"
 jobs:
