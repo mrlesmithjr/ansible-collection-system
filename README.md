@@ -9,6 +9,7 @@ Ansible collection of system related roles
 |   apt_sources    |      ![mrlesmithjr.system.apt_sources](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.apt_sources/badge.svg)      |
 | bootstrap_python | ![mrlesmithjr.system.bootstrap_python](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.bootstrap_python/badge.svg) |
 |      chrony      |           ![mrlesmithjr.system.chrony](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.chrony/badge.svg)           |
+|       motd       |             ![mrlesmithjr.system.motd](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.motd/badge.svg)             |
 
 ## Requirements
 
