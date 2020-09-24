@@ -3,6 +3,7 @@
   hosts: all
   vars:
     apt_sources_enable_backports: false
+    configure_postfix: true
   tasks:
     - name: Test apt_sources Role
       import_role:
