@@ -1,0 +1,29 @@
+---
+- hosts: all
+  collections:
+    - mrlesmithjr.system
+
+  tasks:
+    - name: Apply mrlesmithjr.system.bootstrap_python
+      import_role:
+        name: mrlesmithjr.system.bootstrap_python
+
+    - name: Apply mrlesmithjr.system.change_hostname
+      import_role:
+        name: mrlesmithjr.system.change_hostname
+
+    - name: Apply mrlesmithjr.system.etc_hosts
+      import_role:
+        name: mrlesmithjr.system.etc_hosts
+
+    - name: Apply mrlesmithjr.system.ntp
+      import_role:
+        name: mrlesmithjr.system.ntp
+
+    - name: Apply mrlesmithjr.system.rsyslog
+      import_role:
+        name: mrlesmithjr.system.rsyslog
+
+    - name: Apply mrlesmithjr.system.sshd
+      import_role:
+        name: mrlesmithjr.system.sshd
