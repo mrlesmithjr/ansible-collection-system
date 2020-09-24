@@ -30,3 +30,8 @@
       import_role:
         name: ntp
       when: lookup('env', 'COLLECTION_ROLE') == "ntp"
+
+    - name: Test postfix Role
+      import_role:
+        name: postfix
+      when: lookup('env', 'COLLECTION_ROLE') == "postfix"
