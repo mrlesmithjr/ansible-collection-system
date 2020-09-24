@@ -20,3 +20,13 @@
       import_role:
         name: chrony
       when: lookup('env', 'COLLECTION_ROLE') == "chrony"
+
+    - name: Test motd Role
+      import_role:
+        name: motd
+      when: lookup('env', 'COLLECTION_ROLE') == "motd"
+
+    - name: Test ntp Role
+      import_role:
+        name: ntp
+      when: lookup('env', 'COLLECTION_ROLE') == "ntp"
