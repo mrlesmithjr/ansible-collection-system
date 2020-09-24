@@ -10,6 +10,7 @@ Ansible collection of system related roles
 | bootstrap_python | ![mrlesmithjr.system.bootstrap_python](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.bootstrap_python/badge.svg) |
 |      chrony      |           ![mrlesmithjr.system.chrony](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.chrony/badge.svg)           |
 |       motd       |             ![mrlesmithjr.system.motd](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.motd/badge.svg)             |
+|       ntp        |              ![mrlesmithjr.system.ntp](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.ntp/badge.svg)              |
 
 ## Requirements
 
