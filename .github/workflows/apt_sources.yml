@@ -2,14 +2,18 @@ name: mrlesmithjr.system.apt_sources
 on:
   push:
     paths:
-      - "roles/apt_sources"
-      - "molecule/**"
       - ".github/workflows/apt_sources.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/apt_sources"
   pull_request:
     paths:
-      - "roles/apt_sources"
-      - "molecule/**"
       - ".github/workflows/apt_sources.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/apt_sources"
 jobs:
   molecule:
     runs-on: ubuntu-latest

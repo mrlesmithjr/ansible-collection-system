@@ -2,14 +2,18 @@ name: mrlesmithjr.system.ntp
 on:
   push:
     paths:
-      - "roles/ntp"
-      - "molecule/**"
       - ".github/workflows/ntp.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/ntp"
   pull_request:
     paths:
-      - "roles/ntp"
-      - "molecule/**"
       - ".github/workflows/ntp.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/ntp"
 jobs:
   molecule:
     runs-on: ubuntu-latest

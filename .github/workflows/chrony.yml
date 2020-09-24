@@ -2,14 +2,18 @@ name: mrlesmithjr.system.chrony
 on:
   push:
     paths:
-      - "roles/chrony"
-      - "molecule/**"
       - ".github/workflows/chrony.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/chrony"
   pull_request:
     paths:
-      - "roles/chrony"
-      - "molecule/**"
       - ".github/workflows/chrony.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/chrony"
 jobs:
   molecule:
     runs-on: ubuntu-latest

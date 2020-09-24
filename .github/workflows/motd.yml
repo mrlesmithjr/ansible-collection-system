@@ -2,14 +2,18 @@ name: mrlesmithjr.system.motd
 on:
   push:
     paths:
-      - "roles/motd"
-      - "molecule/**"
       - ".github/workflows/motd.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/motd"
   pull_request:
     paths:
-      - "roles/motd"
-      - "molecule/**"
       - ".github/workflows/motd.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/motd"
 jobs:
   molecule:
     runs-on: ubuntu-latest

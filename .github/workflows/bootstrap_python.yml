@@ -2,14 +2,18 @@ name: mrlesmithjr.system.bootstrap_python
 on:
   push:
     paths:
-      - "roles/bootstrap_python"
-      - "molecule/**"
       - ".github/workflows/bootstrap_python.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/bootstrap_python"
   pull_request:
     paths:
-      - "roles/bootstrap_python"
-      - "molecule/**"
       - ".github/workflows/bootstrap_python.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/bootstrap_python"
 jobs:
   molecule:
     runs-on: ubuntu-latest
