@@ -1,0 +1,53 @@
+name: mrlesmithjr.system.base
+on:
+  push:
+    paths:
+      - ".github/workflows/base.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/base"
+  pull_request:
+    paths:
+      - ".github/workflows/base.yml"
+      - "molecule/**"
+      - "requirements-dev.txt"
+      - "requirements.txt"
+      - "roles/base"
+jobs:
+  molecule:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        molecule_distro:
+          - centos7
+          - centos8
+          # - debian8
+          - debian9
+          - debian10
+          - fedora
+          - ubuntu1604
+          - ubuntu1804
+          - ubuntu2004
+        collection_role:
+          - base
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+      - name: Set up Python 3
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip pip-tools
+          pip-sync requirements.txt requirements-dev.txt
+          ansible --version
+          molecule --version
+      - name: Test with molecule
+        run: |
+          export COLLECTION_ROLE="${{ matrix.collection_role }}"
+          molecule test --scenario-name ${{ matrix.molecule_distro }}
