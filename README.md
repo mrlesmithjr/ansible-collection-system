@@ -14,6 +14,7 @@ Ansible collection of system related roles
 |       ntp        |              ![mrlesmithjr.system.ntp](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.ntp/badge.svg)              |
 |     postfix      |          ![mrlesmithjr.system.postfix](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.postfix/badge.svg)          |
 |     rsyslog      |          ![mrlesmithjr.system.rsyslog](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.rsyslog/badge.svg)          |
+|       sshd       |             ![mrlesmithjr.system.sshd](https://github.com/mrlesmithjr/ansible-collection-system/workflows/mrlesmithjr.system.sshd/badge.svg)             |
 
 ## Requirements
 

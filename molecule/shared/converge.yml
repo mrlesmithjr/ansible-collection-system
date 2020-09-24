@@ -46,3 +46,8 @@
       import_role:
         name: rsyslog
       when: lookup('env', 'COLLECTION_ROLE') == "rsyslog"
+
+    - name: Test sshd Role
+      import_role:
+        name: sshd
+      when: lookup('env', 'COLLECTION_ROLE') == "sshd"
