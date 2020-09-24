@@ -41,3 +41,8 @@
       import_role:
         name: postfix
       when: lookup('env', 'COLLECTION_ROLE') == "postfix"
+
+    - name: Test rsyslog Role
+      import_role:
+        name: rsyslog
+      when: lookup('env', 'COLLECTION_ROLE') == "rsyslog"
