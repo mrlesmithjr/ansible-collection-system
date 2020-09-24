@@ -3,6 +3,8 @@
   hosts: all
   vars:
     apt_sources_enable_backports: false
+    cloud_init_clean: true
+    cloud_init_config: true
     configure_postfix: true
   tasks:
     - name: Test apt_sources Role
@@ -26,6 +28,11 @@
       import_role:
         name: chrony
       when: lookup('env', 'COLLECTION_ROLE') == "chrony"
+
+    - name: Test cloud_init Role
+      import_role:
+        name: cloud_init
+      when: lookup('env', 'COLLECTION_ROLE') == "cloud_init"
 
     - name: Test motd Role
       import_role:

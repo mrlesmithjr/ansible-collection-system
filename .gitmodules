@@ -43,3 +43,9 @@
 [submodule "roles/base"]
 	path = roles/base
 	url = https://github.com/mrlesmithjr/ansible-base.git
+[submodule "roles/change_hostname"]
+	path = roles/change_hostname
+	url = https://github.com/mrlesmithjr/ansible-change-hostname.git
+[submodule "roles/cloud_init"]
+	path = roles/cloud_init
+	url = https://github.com/mrlesmithjr/ansible-cloud-init.git
