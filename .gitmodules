@@ -37,3 +37,9 @@
 [submodule "roles/postfix"]
 	path = roles/postfix
 	url = https://github.com/mrlesmithjr/ansible-postfix.git
+[submodule "roles/manage_lvm"]
+	path = roles/manage_lvm
+	url = https://github.com/mrlesmithjr/ansible-manage-lvm.git
+[submodule "roles/base"]
+	path = roles/base
+	url = https://github.com/mrlesmithjr/ansible-base.git
